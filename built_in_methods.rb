@@ -120,9 +120,19 @@ puts shoe_size.next
 # the order of the return value is true 6 false 10 because each method is run on each variable before moving onto the next variable
 
 
-cities = ["Denver", "Pittsburgh"]
-cities.each do |city| 
-    puts city.include?("e")
-    puts city.length
-end 
+# cities = ["Denver", "Pittsburgh"]
+# cities.each do |city| 
+#     puts city.include?("e")
+#     puts city.length
+# end 
 
+# ^^this uses string methods on each string element rather than calling an array method on the array.
+# based on Kaitlyn's feedback: 
+
+cities = ["Denver", "Pittsburgh"]
+p cities.push("Seattle")
+p cities.insert(1, "Honolulu")
+
+# The cities array contains two city names, Denver and Pittsburgh. 
+# The push method is used to add a new city name to the end of the array, which gives the return value ["Denver", "Pittsburgh", "Seattle"]
+# The insert method is used to add a new city name at the designated array position (in this case, we've used 1 to indicate we want the city name to be in array position 1). The return value is ["Denver", "Honolulu" "Pittsburgh", "Seattle"]
